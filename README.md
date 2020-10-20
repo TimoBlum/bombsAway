@@ -1,2 +1,2 @@
 # bombsAway
- There is an Ant (black square) on the screen who needs to flee from incoming bombs (red squares)
+ There is an Ant (black square) on the screen who needs to flee from incoming bombs (red squares).

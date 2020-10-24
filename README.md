@@ -3,4 +3,4 @@
 
 
 
-![game looks](bombgame.png)
+![game looks](newBombsAway.png)

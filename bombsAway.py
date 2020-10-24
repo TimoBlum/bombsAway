@@ -58,7 +58,7 @@ def redrawGameWindow():
     # Redraw Window
     win.fill(WHITE)
     ant.drawOnScreen()
-
+    ant2.drawOnScreen()
     bombs = 0
     while bombs < bLimit:
         dropBomb()
@@ -67,9 +67,8 @@ def redrawGameWindow():
     ant.update()
     ant.findMostSecure()
 
-    # ant2.drawOnScreen()
-    # ant2.update()
-    # ant2.findMostSecure()
+    ant2.update()
+    ant2.findMostSecure()
 
     drawGrid(win, rows, xy)
     resetDanger()
@@ -152,11 +151,11 @@ def draw(rect, color):
 ant = Ant()
 
 
-# ant2 = Ant()
+ant2 = Ant()
 
 def dropBomb():
     a = chooseBlock(0, blockcount)
-    while a == blocks[ant.blockn]:
+    while a == blocks[ant.blockn] or a == blocks[ant2.blockn]:
         a = chooseBlock(rows, blockcount)
     draw((blocks[a][0], blocks[a][1], spaceBtwn, spaceBtwn), RED)
     bs = findNeighbour(a)
@@ -179,7 +178,7 @@ def main():
     pygame.time.get_ticks()
 
     while run:
-        clock.tick(1.5)
+        clock.tick(2.5)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False

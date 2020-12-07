@@ -193,5 +193,3 @@ def main():
 
 print(findNeighbour(ant.blockn))
 main()
-
-# finished by Timothee B. on 20th of Oktober 2020.
